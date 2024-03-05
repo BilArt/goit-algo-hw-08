@@ -42,3 +42,13 @@ class Graph:
         total_cost = sum(key)
         return total_cost
 
+# Example usage
+if __name__ == "__main__":
+    g = Graph(4)
+    g.add_edge(0, 1, 10)
+    g.add_edge(0, 2, 6)
+    g.add_edge(0, 3, 5)
+    g.add_edge(1, 3, 15)
+    g.add_edge(2, 3, 4)
+
+    print("Minimum Cost to Connect All Cables:", g.prim_mst())
